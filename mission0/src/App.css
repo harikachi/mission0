@@ -1,0 +1,234 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Header-left {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex; /* Enable flexbox layout */
+  justify-content: space-between; /* Distribute space between content and image */
+  align-items: center; /* Vertically align content and image */
+  padding: 20px; /* Add padding around the container */
+  background-color: #edebeb;
+}
+
+.half {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 300px; /* Minimum width for the content section */
+}
+.half2 {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 300px; /* Minimum width for the content section */
+}
+.Logo {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image covers the area and maintains aspect ratio */
+  border: 2px solid #000; 
+}
+.Logomid {
+  max-width: 80%; /* Ensure the image is responsive */
+  max-height: 30vh; /* Maintain aspect ratio */
+  flex: 0 1 auto; /* Allow image to shrink, but not grow */
+}
+
+.Company-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.Header-right {
+  display: flex;
+  align-items: center;
+}
+
+.Header-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.Header-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Header-nav li {
+  margin-left: 20px;
+}
+
+.Header-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+}
+
+.Header-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for the Login link */
+.Login-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #e1e6ec; /* Background color for the box */
+  border: 2px solid #01070e; /* Border color matching the background */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.Login-link:hover {
+  background-color: white; /* Background color on hover */
+  color: #007bff; /* Text color on hover */
+  border-color: #007bff; /* Border color on hover */
+}
+
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;/*add*/
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image {
+  margin: 10px;
+  width: 300px; /* Adjust the width as needed */
+  height: 200px; /* Maintain aspect ratio */
+  object-fit: cover;
+  border: 2px solid #000; /* Optional: Add border */
+}
+.image-item {
+  flex: 1; /* Allow the content to grow and take available space */
+  min-width: 300px; /* Minimum width for the content section */
+  padding: 20px; /* Add padding inside the content section */
+  box-sizing: border-box; /* Include padding in the element’s total width and height */
+  border: 2px solid hsl(0, 1%, 55%);
+  margin: 10px;
+  text-align: center;
+  background-color: #edebeb;
+}
+.image-item p {
+  margin-top: 10px; /* Space between image and text */
+}
+.justify-text {
+  text-align: justify;
+}
+.left-justify-text {
+  text-align: justify; /* Justifies the text */
+  text-align-last: left; /* Aligns the last line to the left */
+  text-justify: inter-word; /* Specifies how the spacing between words is adjusted */
+  background-color: #a5a3a3;
+  padding-left: 10px;
+}
+
+/* Style for the container that holds the search box and button */
+.search-container {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Vertically align items in the center */
+  justify-content: center; /* Center items horizontally */
+  flex: 1; /* Allow the content to grow and take available space */
+  padding: 20px; /* Add padding inside the content section */
+  box-sizing: border-box; /* Include padding in the element’s total width and height */
+  width: 100%;
+  text-align: center;
+  background-color: #edebeb;
+}
+
+/* Style for the search box */
+.search-box {
+  padding: 10px; /* Add padding inside the search box */
+  border: 2px solid #ccc; /* Light grey border */
+  border-radius: 4px; /* Rounded corners */
+  width: 300px; /* Set width of the search box */
+  font-size: 13px; /* Increase font size for readability */
+}
+
+/* Style for the search button */
+.search-button {
+  padding: 10px 20px; /* Add padding inside the button */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  font-size: 13px; /* Increase font size for readability */
+  margin-left: 10px; /* Space between the search box and button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Optional: Add a hover effect for the button */
+.search-button:hover {
+  background-color: #0056b3; /* Darker blue background on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+  }
+  .search-container {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .image-container {
+    flex-direction: column;
+  }
+  .half, .image-item {
+    min-width: 100%; /* Full width for both sections */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  .half2 {
+    display: none;
+  }
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
+    color: #000;
+  }
+  .Header-nav {
+    display: none; /* Hide nav list by default on mobile */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 50px; /* Adjust based on your navbar height */
+    left: 0;
+  }
+  .Header-nav.show {
+    display: flex; /* Show nav list when the class is added */
+  }
+}
+
+.menu-icon {
+  display: none; /* Hide by default, show only on mobile */
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Default display for desktop view */
+}
